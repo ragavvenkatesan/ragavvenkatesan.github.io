@@ -1,0 +1,49 @@
+      <div id="wrapper">
+      <a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
+        <!--Sidebar-->
+        <div id="sidebar">
+          <div id="main-nav">
+            <div id="nav-container">
+              <div id="profile" class="clearfix">
+                  <div class="title">
+                    <h3>Convolutional Neural Networks in Visual Computing</h3>
+                  </div>   
+                </div>
+                
+                <ul id="navigation">
+                
+                  {% if page.path == "publications/cnn-book/index.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+                    <a href="{{site.url}}/publications/cnn-book/index.html">
+                      <div class="icon icon-home"></div>
+                      <div class="text">Home</div> 
+                    </a>
+                  </li>
+
+                  {% if page.path == "publications/cnn-book/illustrations.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+                    <a href="{{site.url}}/publications/cnn-book/illustrations.html">
+                      <div class="icon icon-picture"></div>
+                      <div class="text">Illustrations & Figures</div> 
+                    </a>
+                  </li>
+                </ul>
+
+              </div>        
+            </div>                
+            <div class="social-icons"><center>
+              <ul><li>&nbsp;&nbsp;&nbsp;&nbsp;</li>                        
+                  <li><a target ="_blank" href="https://github.com/ragavvenkatesan/yann"><i class="icon-github"></i></a></li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              </ul>
+          </center></div>  
+        </div>
+      </div>
+     
+  <!--/Sidebar-->

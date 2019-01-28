@@ -1,0 +1,158 @@
+      <div id="wrapper">
+      <a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
+        <!--Sidebar-->
+        <div id="sidebar">
+          <div id="main-nav">
+            <div id="nav-container">
+              <div id="profile" class="clearfix">
+                  <div class="portrate hidden-xs">
+                  </div>
+                  <div class="title">
+                    <h2>Ragav Venkatesan</h2>
+                    <h3>Amazon Web Services</h3>
+                  </div>   
+                </div>
+                <ul id="navigation">
+                  {% if page.path == "index.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+                    <a href="{{site.url}}/index.html">
+                      <div class="icon icon-home"></div>
+                      <div class="text">Home</div> 
+                    </a>
+                  </li>  
+                  
+                  {% if page.path == "profile.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+                    <a href="{{site.url}}/profile.html">
+                      <div class="icon icon-user"></div>
+                      <div class="text">Profile</div>
+                    </a>
+                  </li>
+		
+
+                    {% if page.path == "research.html" %}
+                    <li class = "currentmenu">
+                    {% else %}
+                    <li>
+                    {% endif %}
+                    <a href="{{site.url}}/research.html">
+                      <div class="icon icon-cogs"></div>
+                      <div class="text">Research</div>
+                    </a>
+                  </li> 
+                  
+
+                      {% if page.path == "publications.html" %}
+                      <li class = "currentmenu">
+                      {% else %}
+                      <li>
+                      {% endif %}
+                    <a href="{{site.url}}/publications.html">
+                      <div class="icon icon-edit"></div>
+                      <div class="text">Publications</div>
+                    </a>
+                  </li> 
+
+
+                      {% if page.path == "teaching.html" %}
+                      <li class = "currentmenu">
+                      {% else %}
+                      <li>
+                      {% endif %}
+                    <a href="{{site.url}}/teaching.html">
+                      <div class="icon icon-time"></div>
+                      <div class="text">Teaching</div>
+                    </a>
+                  </li>
+                             
+                  {% if page.path == "contact.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+              <a href="{{site.url}}/contact.html">
+                  <div class="icon icon-phone"></div>
+                  <div class="text">Contact Me</div>
+              </a>
+            </li>
+
+                    {% if page.path == "aws.html" %}
+                    <li class = "currentmenu">
+                    {% else %}
+                    <li>
+                    {% endif %}
+                <a href="{{site.url}}/aws.html">
+                    <div class="icon fab fa-aws"></div>
+                    <div class="text">Amazon Web Services</div>
+                </a>
+              </li>            
+                              
+                     <a href="{{site.url}}/thaalam.html">
+                        {% if page.path == "thaalam.html" %}
+                        <li class = "currentmenu">
+                        {% else %}
+                        <li>
+                        {% endif %}
+                        <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/personal/thaalam.png"></div>
+                      <div class="text">Thaalam Studios</div>
+                    </a>
+                  </li>
+
+                  
+                        {% if page.path == "photography/index.html" %}
+                        <li class = "currentmenu">
+                        {% else %}
+                        <li>
+                        {% endif %}
+                       <a href="{{site.url}}/photography/index.html">
+                      <div class="icon icon-picture"></div>
+                      <div class="text">Through the lens </div>
+                    </a>
+                  </li> 
+
+  
+                      <a href="{{site.url}}/le-kaapi-projekt.html">
+                        {% if page.path == "le-kaapi-projekt.html" %}
+                        <li class = "currentmenu">
+                        {% else %}
+                        <li>
+                        {% endif %}
+                      <div class="icon icon-music"></div>
+                      <div class="text">L&egrave; Kaapi Projekt</div>
+                    </a>
+                  </li>                                        
+
+
+                        {% if page.path == "beingbetaware/index.html" %}
+                        <li class = "currentmenu">
+                        {% else %}
+                        <li>
+                        {% endif %}
+                       <a href="{{site.url}}/beingbetaware/index.html">
+                      <div class="icon icon-rss"></div>
+                      <div class="text">Being Betaware</div>
+                    </a>
+                  </li>                                                                                                   
+                                    
+                          
+
+                </ul>
+              </div>        
+            </div>                
+            <div class="social-icons">
+              <ul>                        
+                  <li><a target ="_blank" href="https://www.linkedin.com/in/rvenkatesan"><i class="icon-linkedin"></i></a></li>
+                  <li><a target ="_blank" href="http://scholar.google.com/citations?user=MIrtXhMAAAAJ&hl"><i class="ai ai-google-scholar"></i></a></li>
+                  <li><a target ="_blank" href="https://github.com/ragavvenkatesan"><i class="icon-github"></i></a></li>
+              </ul>
+          </div>  
+        </div>
+      </div>
+     
+  <!--/Sidebar-->

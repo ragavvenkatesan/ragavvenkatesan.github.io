@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<div id="publications" class="page">
+    <div class="page-container">
+
+
+        <div class="pageheader">
+            <div class="headercontent">
+                <div class="section-container">
+                    
+                    <h2 class="title">Publications</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>&copy; <strong>Copyright Notice</strong>: The material presented here is only presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors, publishers or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright and/or copyright holders. In most cases, these works may not be reposted without the explicit permission of the copyright holders. Please contact authors for further details.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pagecontents">
+
+            <div class="section color-1" id="filters">
+                <div class="section-container">
+                    <div class="row">                        
+                        <div class="col-md-3">
+                            <h3>Filter by type:</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+                                <option class="filter" value="all" selected>All types</option>
+                                <option class="filter" value="jpaper">Jounal Papers</option>
+                                <option class="filter" value="cpaper">Conference Papers</option>
+                                <option class="filter" value="arxiv">arXiv Papers</option>                                
+                                <option class="filter" value="book">Books</option>
+                                <option class="filter" value="thesis">Thesis</option>
+            					<option class="filter" value="poster">Poster Papers</option>
+                                <option class="filter" value="media">Media Articles</option>
+                                <!-- <option class="filter" value="report">Reports</option>
+                                <option class="filter" value="tpaper">Technical Papers</option> -->
+                            </select>
+                        </div>                        
+                        <div class="col-md-3" id="sort">
+                            <span>Sort by year:</span>
+                            <div class="btn-group pull-right"> 
+
+                                <button type="button" data-sort="data-year" data-order="desc" class="sort btn btn-default"><i class="icon-sort-by-order"></i></button>
+                                <button type="button" data-sort="data-year" data-order="asc" class="sort btn btn-default"><i class="icon-sort-by-order-alt"></i></button>
+
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="section color-2" id="pub-grid">
+                <div class="section-container">                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pitems">
+                                
+            			         {% include publications.html %}
+            			
+    		      
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    		
+
+
+
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    		
+    		
+    					
+    	
+    	
+    	
+    	
+    	
+    	

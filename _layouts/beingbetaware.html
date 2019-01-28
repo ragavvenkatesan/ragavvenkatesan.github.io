@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div id="gallery" class="page">
+    <div class="pagecontents">
+
+        <div class="section pageheader" id="gallery-header">
+            <div class="section-container">
+                <div class="row">                       	                             
+                    
+                    <div class ="col-md-12"> 
+                          <h3 class="title"> <a href="{{ site.url }}/beingbetaware/index.html"> <i class="iconts icon-arrow-left "></i>  </a>
+
+                    
+
+                             {{ page.title }}</h3>               
+
+                     </div>
+                      
+                </div>
+
+
+            </div>
+        </div>
+
+
+            <div class="pagecontents">
+                <div class="section color-1">
+                    <div class="section-container">
+                        <div class="row">                            
+                              {{ content }}
+                              <br>
+                                  
+                              <br>
+                                  
+                                  <i>Publication date: {{ page.date | date: "%-d %B %Y" }}</i> <br>
+                        </div></div></div></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

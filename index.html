@@ -68,19 +68,20 @@ layout: default
             </div>
           </div> 
           <div class="pagecontents">
-            <div class="color-1">
-              <div class="section-container">
-                <div class="row">
-                  <div class="section-container">
-                    <h2 class="title">News & Updates</h2> <br/>
-                    <div class="clearfix visible-sm visible-xs" style="overflow:auto;" ></div>
-                    <ul class="ul-dates"  style=" height: 30em; overflow: auto">  
-                        {% include news.html %}
-                    </ul>
-                    <br/><br/>
-                  </div>
+            <div class="section color-1">
+                <div class="section-container">
+                    <div class="row">
+                        <h2 class="title">News</h2> 
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="clearfix visible-sm visible-xs" style="overflow:auto;" ></div>
+                            <ul class="timeline">
+                            
+                            {% include aws_instructor.html %}   
+    
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
       

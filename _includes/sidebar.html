@@ -83,6 +83,17 @@
               </a>
             </li>
 
+            {% if page.path == "wagers.html" %}
+            <li class = "currentmenu">
+            {% else %}
+            <li>
+            {% endif %}
+        <a href="{{site.url}}/wagers.html">
+            <div class="icon fab fa-money"></div>
+            <div class="text">Wagers</div>
+              </a>
+            </li>   
+
                     {% if page.path == "aws.html" %}
                     <li class = "currentmenu">
                     {% else %}

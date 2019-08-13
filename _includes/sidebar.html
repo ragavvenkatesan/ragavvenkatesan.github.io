@@ -36,6 +36,16 @@
                     </a>
                   </li>
 		
+                  {% if page.path == "publications.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+                <a href="{{site.url}}/publications.html">
+                  <div class="icon icon-edit"></div>
+                  <div class="text">Publications</div>
+                </a>
+              </li> 
 
                     {% if page.path == "research.html" %}
                     <li class = "currentmenu">
@@ -48,17 +58,6 @@
                     </a>
                   </li> 
                   
-
-                      {% if page.path == "publications.html" %}
-                      <li class = "currentmenu">
-                      {% else %}
-                      <li>
-                      {% endif %}
-                    <a href="{{site.url}}/publications.html">
-                      <div class="icon icon-edit"></div>
-                      <div class="text">Publications</div>
-                    </a>
-                  </li> 
 
 
                       {% if page.path == "teaching.html" %}
@@ -83,17 +82,6 @@
               </a>
             </li>
 
-            {% if page.path == "wagers.html" %}
-            <li class = "currentmenu">
-            {% else %}
-            <li>
-            {% endif %}
-        <a href="{{site.url}}/wagers.html">
-            <div class="icon icon-money"></div>
-            <div class="text">Wagers</div>
-              </a>
-            </li>   
-
                     {% if page.path == "aws.html" %}
                     <li class = "currentmenu">
                     {% else %}
@@ -116,18 +104,6 @@
                     </a>
                   </li>
 
-                  
-                        {% if page.path == "photography/index.html" %}
-                        <li class = "currentmenu">
-                        {% else %}
-                        <li>
-                        {% endif %}
-                       <a href="{{site.url}}/photography/index.html">
-                      <div class="icon icon-picture"></div>
-                      <div class="text">Through the lens </div>
-                    </a>
-                  </li> 
-
   
                       <a href="{{site.url}}/le-kaapi-projekt.html">
                         {% if page.path == "le-kaapi-projekt.html" %}
@@ -139,7 +115,29 @@
                       <div class="text">L&egrave; Kaapi Projekt</div>
                     </a>
                   </li>                                                                                                
-                            
+                        
+                  {% if page.path == "photography/index.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+                 <a href="{{site.url}}/photography/index.html">
+                <div class="icon icon-picture"></div>
+                <div class="text">Through the lens </div>
+              </a>
+            </li> 
+                  
+                  {% if page.path == "wagers.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+              <a href="{{site.url}}/wagers.html">
+                  <div class="icon icon-money"></div>
+                  <div class="text">Wagers</div>
+                    </a>
+                  </li>   
+                  
 
                 </ul>
               </div>        

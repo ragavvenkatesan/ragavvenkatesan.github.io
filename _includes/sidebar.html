@@ -90,7 +90,6 @@
                       <div class="text">Thaalam Studios</div>
                     </a>
                   </li>
-
   
                       <a href="{{site.url}}/le-kaapi-projekt.html">
                         {% if page.path == "le-kaapi-projekt.html" %}
@@ -103,6 +102,17 @@
                     </a>
                   </li>                                                                                                
                         
+                  <a href="{{site.url}}/variety-pack.html">
+                    {% if page.path == "variety-pack.html" %}
+                    <li class = "currentmenu">
+                    {% else %}
+                    <li>
+                    {% endif %}
+                    <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/personal/vp-logo.png"></div>
+                  <div class="text">Variety Pack</div>
+                </a>
+              </li>   
+
                   {% if page.path == "photography/index.html" %}
                   <li class = "currentmenu">
                   {% else %}

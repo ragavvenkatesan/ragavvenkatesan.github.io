@@ -1,8 +1,8 @@
 # Site settings
 title: Ragav Venkatesan
-email: email@ragav.net
+email: ragav.venkatesan@gmail.com
 description: Venkatesan is a scientist at Amazon specializing in machine learning. 
-url: https://www.ragav.net
+url: https://ragavvenkatesan.github.io
 github_username:  ragavvenkatesan
 # Build settings
 markdown: kramdown

@@ -91,7 +91,17 @@
                     </a>
                   </li>
                                                                                              
-                        
+                  <a href="{{site.url}}/ember-mist.html">
+                    {% if page.path == "ember-mist.html" %}
+                    <li class = "currentmenu">
+                    {% else %}
+                    <li>
+                    {% endif %}
+                    <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/personal/em-logo.png"></div>
+                  <div class="text">Ember Mist</div>
+                </a>
+              </li>   
+    
                   <a href="{{site.url}}/variety-pack.html">
                     {% if page.path == "variety-pack.html" %}
                     <li class = "currentmenu">

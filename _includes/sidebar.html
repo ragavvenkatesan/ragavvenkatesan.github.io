@@ -11,6 +11,8 @@
                     <h2>Ragav Venkatesan</h2>
                     <h3>Engineer at Nvidia AI</h3>
                     <h3>Founder of Thaalam Studios</h3>
+                    <h3>Bass Player for Ember Mist</h3>
+                    <h3>Bass Player for Variety Pack</h3>
                   </div>   
                 </div>
                 <ul id="navigation">
@@ -76,10 +78,21 @@
                     {% endif %}
                 <a href="{{site.url}}/amazon.html">
                     <div class="icon fab fa-amazon"></div>
-                    <div class="text">Amazon</div>
+                    <div class="text">Amazon (2017-2021)</div>
                 </a>
               </li>            
-                              
+                         
+              {% if page.path == "nvidia.html" %}
+              <li class = "currentmenu">
+              {% else %}
+              <li>
+              {% endif %}
+          <a href="{{site.url}}/nvidia.html">
+            <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/nvidia-fa.png"></div>
+              <div class="text">NVIDIA (2021-Present)</div>
+          </a>
+        </li>  
+
                      <a href="{{site.url}}/thaalam.html">
                         {% if page.path == "thaalam.html" %}
                         <li class = "currentmenu">
@@ -108,7 +121,7 @@
                     {% else %}
                     <li>
                     {% endif %}
-                    <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/personal/vp-logo.png"></div>
+                    <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/personal/vp-logo-sidebar.png"></div>
                   <div class="text">Variety Pack</div>
                 </a>
               </li>   

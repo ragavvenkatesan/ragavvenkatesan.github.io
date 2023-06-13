@@ -71,6 +71,17 @@
               </a>
             </li>
 
+                  {% if page.path == "nvidia.html" %}
+                  <li class = "currentmenu">
+                  {% else %}
+                  <li>
+                  {% endif %}
+              <a href="{{site.url}}/nvidia.html">
+                <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/nvidia-fa.png"></div>
+                  <div class="text">NVIDIA (2021-Present)</div>
+              </a>
+            </li>  
+
                     {% if page.path == "amazon.html" %}
                     <li class = "currentmenu">
                     {% else %}
@@ -81,28 +92,6 @@
                     <div class="text">Amazon (2017-2021)</div>
                 </a>
               </li>            
-                         
-              {% if page.path == "nvidia.html" %}
-              <li class = "currentmenu">
-              {% else %}
-              <li>
-              {% endif %}
-          <a href="{{site.url}}/nvidia.html">
-            <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/nvidia-fa.png"></div>
-              <div class="text">NVIDIA (2021-Present)</div>
-          </a>
-        </li>  
-
-                     <a href="{{site.url}}/thaalam.html">
-                        {% if page.path == "thaalam.html" %}
-                        <li class = "currentmenu">
-                        {% else %}
-                        <li>
-                        {% endif %}
-                        <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/personal/thaalam.png"></div>
-                      <div class="text">Thaalam Studios</div>
-                    </a>
-                  </li>
                                                                                              
                   <a href="{{site.url}}/ember-mist.html">
                     {% if page.path == "ember-mist.html" %}
@@ -125,6 +114,17 @@
                   <div class="text">Variety Pack</div>
                 </a>
               </li>   
+
+              <a href="{{site.url}}/thaalam.html">
+                {% if page.path == "thaalam.html" %}
+                <li class = "currentmenu">
+                {% else %}
+                <li>
+                {% endif %}
+                <div class ="icon" ><img width = "25em" src = "{{site.url}}/img/personal/thaalam.png"></div>
+              <div class="text">Thaalam Studios</div>
+            </a>
+          </li>
 
               <a href="{{site.url}}/le-kaapi-projekt.html">
                 {% if page.path == "le-kaapi-projekt.html" %}

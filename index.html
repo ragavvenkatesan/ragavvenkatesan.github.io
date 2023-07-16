@@ -76,30 +76,23 @@ layout: default
           <br>
 
           <div class="pagecontents">
-            <div class="color-1">
-              <div class="section-container">
-                <div class="row">
-                  <div class="section-container">
-                    <h2 class="title">Creative News & Updates</h2> <br/>
-                    Performance calendar and ticketing information are available <a target ="_blank" href="https://linktr.ee/ragav.venkatesan">here</a>.
-                </div>
-              </div>
-            </div>
-        </div>      
-
-
-          <div class="pagecontents">
               <div class="color-1">
                 <div class="section-container">
                   <div class="row">
                     <div class="section-container">
                       <h2 class="title">Professional News & Updates</h2> <br/>
                       <div class="clearfix visible-sm visible-xs" style="overflow:auto;" ></div>
-                      <ul class="ul-dates"  style=" height: 30em; overflow: auto">  
+                      <ul class="ul-dates"  style=" height: 15em; overflow: auto">  
                           {% include news.html %}
                       </ul>
                       <br/><br/>
-                    </div>
+
+                    <h2 class="title">Creative News & Updates</h2> <br/>
+                    <div class="clearfix visible-sm visible-xs" style="overflow:auto;" ></div>
+                    <ul class="ul-dates"  style=" height: 15em; overflow: auto">  
+                        {% include creative_news.html %}
+                    </ul>
+                    <br/><br/>
                   </div>
                 </div>
               </div>

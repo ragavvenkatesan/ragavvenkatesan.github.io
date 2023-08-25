@@ -103,6 +103,17 @@
                 </a>
               </li>   
 
+              {% if page.path == "photography/index.html" %}
+              <li class = "currentmenu">
+              {% else %}
+              <li>
+              {% endif %}
+             <a href="https://ragavvenkatesan.myportfolio.com/">
+            <div class="icon icon-picture"></div>
+            <div class="text">Live Stage Photography</div>
+          </a>
+        </li> 
+
               <a href="{{site.url}}/thaalam.html">
                 {% if page.path == "thaalam.html" %}
                 <li class = "currentmenu">
@@ -125,18 +136,6 @@
             </a>
           </li>   
           
-                  {% if page.path == "photography/index.html" %}
-                  <li class = "currentmenu">
-                  {% else %}
-                  <li>
-                  {% endif %}
-                 <a href="https://ragavvenkatesan.myportfolio.com/">
-                <div class="icon icon-picture"></div>
-                <div class="text">Live Stage Photography</div>
-              </a>
-            </li> 
-                  
-
             </ul>
             </div>        
             </div>                

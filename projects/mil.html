@@ -3,251 +3,326 @@ layout: nothing
 ---
 
 <head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252"> 
-  <style>
-  .content{
-    width:800px;
-    padding:25px;
-    margin:25px auto; 
-    background-color:#fff; 
-    border-radius: 12px; 
-    box-shadow: 5px 5px 10px #555;
-	}
-
-.contentblock
-{
-    width : 800px;
-    margin : 0 auto;
-    padding : 0;
-    border-spacing : 25px 0;
-}
-
-a, a:visited
-{
-    color : blue;
-}
-
-	.imgthumb{
-			width: 60px;
-	}
-
-	.imgmedia{
-			max-height: 90px;
-			max-width: 250px;
-	}
-	.imgmedia2{
-		max-width: 196px;
-	}
-
-a.tooltip {outline:none; }
-a.tooltip strong {line-height:30px;}
-a.tooltip:hover {text-decoration:none;} 
-a.tooltip span {
-    z-index:10;display:none; padding:14px 20px;
-    margin-top:60px; margin-left:-160px;
-    width:240px; line-height:16px;
-}
-
-.callout {z-index:20;position:absolute;border:0;top:-14px;left:30px;}
-    
-/*CSS3 extras*/
-.tooltip span
-{
-    border-radius:2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-        
-    -moz-box-shadow: 0px 0px 8px 4px #666;
-    -webkit-box-shadow: 0px 0px 8px 4px #666;
-    box-shadow: 0px 0px 8px 4px #666;
-
-    opacity: 0.9;
-}
-
-.superimg     {vertical-align: super; height: 20px; }
-
-</style>
-
-    <title>Multiple Instance Learning </title> 
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
     <style>
-    img { cursor : pointer; }
+        .content {
+            width: 800px;
+            padding: 25px;
+            margin: 25px auto;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 5px 5px 10px #555;
+        }
+
+        .contentblock {
+            width: 800px;
+            margin: 0 auto;
+            padding: 0;
+            border-spacing: 25px 0;
+        }
+
+        a,
+        a:visited {
+            color: blue;
+        }
+
+        .imgthumb {
+            width: 60px;
+        }
+
+        .imgmedia {
+            max-height: 90px;
+            max-width: 250px;
+        }
+
+        .imgmedia2 {
+            max-width: 196px;
+        }
+
+        a.tooltip {
+            outline: none;
+        }
+
+        a.tooltip strong {
+            line-height: 30px;
+        }
+
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: 60px;
+            margin-left: -160px;
+            width: 240px;
+            line-height: 16px;
+        }
+
+        .callout {
+            z-index: 20;
+            position: absolute;
+            border: 0;
+            top: -14px;
+            left: 30px;
+        }
+
+        /*CSS3 extras*/
+        .tooltip span {
+            border-radius: 2px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+
+            -moz-box-shadow: 0px 0px 8px 4px #666;
+            -webkit-box-shadow: 0px 0px 8px 4px #666;
+            box-shadow: 0px 0px 8px 4px #666;
+
+            opacity: 0.9;
+        }
+
+        .superimg {
+            vertical-align: super;
+            height: 20px;
+        }
     </style>
 
-</head> 
+    <title>Multiple Instance Learning </title>
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
 <body style="background-color:#CCC;font-family:Arial;padding:0;margin:0;">
 
     <div class="content">
-	<center><h1 style="margin-top:5px">Multiple Instance Learning</h1>
-	<table width="100%"><tbody><tr>
-    <td><center><sup>1</sup><a href="https://www.ragav.net" target="_blank">Ragav Venkatesan</a>,
-	<sup>1</sup>Parag Shridhar Chandakkar,
-	<sup>1</sup><a href="https://www.public.asu.edu/~bli24" target="_blank">Baoxin Li</a>,
-    <sup>2,3,4</sup>Helen Li</center></td>
-    </tr>
-	    </tbody></table>
-        
-        <p>A project of Visual Representation and Processing Group.</p>
-        <sup>1</sup>School of Computing Informatics and Decision Systems Engineering, Arizona State University.<br>
-        <sup>2</sup>Weill Cornel Medical College/The Methodist Hospital<br>
-        <sup>3</sup>The University of Texas Health Science Center Houston<br>
-        <sup>4</sup>Thomas Jefferson University.
-	</center>
-<br>
-</div>
+        <center>
+            <h1 style="margin-top:5px">Multiple Instance Learning</h1>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <center><sup>1</sup><a href="https://www.ragav.net" target="_blank">Ragav Venkatesan</a>,
+                                <sup>1</sup>Parag Shridhar Chandakkar,
+                                <sup>1</sup><a href="https://www.public.asu.edu/~bli24" target="_blank">Baoxin Li</a>,
+                                <sup>2,3,4</sup>Helen Li
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-
-
-
-
-
-
-
-
-
-<div class = "content">
-
-<h2 style="margin-top:-5px">What is MIL?</h2>    
-<center><img src="img/mil/DR1.png" width="50%"" border="0"></center>
-
-    <p>Multiple-instance learning (MIL) is a setting where labels
-are provided only for a collection of instances called
-bags. There are two types of instances: negative instances,
-which are found in either negative bags or positive bags, and
-positive instances, which are found only in positive bags.
-While a positive bag should contain at least one inherently
-positive instance, a negative bag must not contain any positive
-instances. In MIL, labels are not available at the instance level. It is interesting to note however that the label space
-is the same for both at the bag level and at the instance
-level. One may attempt to learn instance-level labels during
-the training stage, thus reducing the problem to an instance level
-supervised classification. Alternatively, one may also
-localize and prototype the positive instances in the feature
-space and rely on the proximity to these prototypes for subsequent
-classification.</p>
-
-<p>MIL is an ideal set-up for many computer vision tasks. In particular,
-MIL can be an especially suitable model for medical
-image-based pathology classification and lesion detection localization,
-where an image is labeled pathological just because
-of one or a few lesions localized to small portions of
-the image. Medical images collected in a clinical setting
-may readily have an image-level label (either normal or various
-levels of pathology) while lacking the exact location of
-the lesion(s). The figure above illustrates such an example: color
-fundus images of eyes affected with different pathologies
-of diabetic retinopathy (DR). It is easy to notice that, although
-majority of the image looks normal, a small retinal
-landmark is enough to alter the label of the image from normal
-to pathological. In a MIL formulation for this problem,
-each image can be considered a bag and patches of images
-can be considered instances.</p>
-
-<p>The following video explains the concept. </p>
-
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oaclw6_JYyo" frameborder="0" allowfullscreen></iframe></center>
-</div>                                
-                                
-                                
-                                
-  
-  
-  
-  
-  
-<div class="content">
-<h2 style="margin-top:-5px">MIL featurespace</h2>
-<center><img width = "35%"src ="img/mil/featureSpace.png"> &nbsp; &nbsp;
-<img width = "35%"src ="img/mil/featureSpaceTess.png">
-</center>
-				<p>Each instance belonging
-to a particular cluster is independently drawn from a normal
-distribution that defines the said cluster. While positive bags
-can draw a subset of random cardinality of instances from
-negative distributions, negative bags cannot draw any data
-from positive distributions. Every positive bag must have at least one instance sampled from a positive distribution
-(marked in green ellipses P1 through P4, in the above figure). The centroids
-of these clusters would be the ideal positive instance prototypes
-that a MIL algorithm should identify. A prototype is an idealized point around which any point will share simliar characteristics.
-   </p>
-   
-   <p> In most MIL cases, one constructs a function as shown above that 'models' the 'positivity' of a MIL neighborhood. Any
-       local maximas in this space are the positive instance prototype that we are looking for. Once a prototype is figured,
-       its a straightforward manimization of training error to identify a radius around the prototype to construct a hyper-sphere that 
-       is a region for classifying a point as a truly and inherently positive instance. </p>
+            <p>A project of Visual Representation and Processing Group.</p>
+            <sup>1</sup>School of Computing Informatics and Decision Systems Engineering, Arizona State University.<br>
+            <sup>2</sup>Weill Cornel Medical College/The Methodist Hospital<br>
+            <sup>3</sup>The University of Texas Health Science Center Houston<br>
+            <sup>4</sup>Thomas Jefferson University.
+        </center>
+        <br>
     </div>
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-                                
-                                
-                                
+
+
+
+
+
+
+
+
+    <div class="content">
+
+        <h2 style="margin-top:-5px">What is MIL?</h2>
+        <center><img src="img/mil/DR1.png" width="50%"" border=" 0"></center>
+
+        <p>Multiple-instance learning (MIL) is a setting where labels
+            are provided only for a collection of instances called
+            bags. There are two types of instances: negative instances,
+            which are found in either negative bags or positive bags, and
+            positive instances, which are found only in positive bags.
+            While a positive bag should contain at least one inherently
+            positive instance, a negative bag must not contain any positive
+            instances. In MIL, labels are not available at the instance level. It is interesting to note however that
+            the label space
+            is the same for both at the bag level and at the instance
+            level. One may attempt to learn instance-level labels during
+            the training stage, thus reducing the problem to an instance level
+            supervised classification. Alternatively, one may also
+            localize and prototype the positive instances in the feature
+            space and rely on the proximity to these prototypes for subsequent
+            classification.</p>
+
+        <p>MIL is an ideal set-up for many computer vision tasks. In particular,
+            MIL can be an especially suitable model for medical
+            image-based pathology classification and lesion detection localization,
+            where an image is labeled pathological just because
+            of one or a few lesions localized to small portions of
+            the image. Medical images collected in a clinical setting
+            may readily have an image-level label (either normal or various
+            levels of pathology) while lacking the exact location of
+            the lesion(s). The figure above illustrates such an example: color
+            fundus images of eyes affected with different pathologies
+            of diabetic retinopathy (DR). It is easy to notice that, although
+            majority of the image looks normal, a small retinal
+            landmark is enough to alter the label of the image from normal
+            to pathological. In a MIL formulation for this problem,
+            each image can be considered a bag and patches of images
+            can be considered instances.</p>
+
+        <p>The following video explains the concept. </p>
+
+        <center>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oaclw6_JYyo" frameborder="0"
+                allowfullscreen></iframe>
+        </center>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="content">
+        <h2 style="margin-top:-5px">MIL featurespace</h2>
+        <center><img width="35%" src="img/mil/featureSpace.png"> &nbsp; &nbsp;
+            <img width="35%" src="img/mil/featureSpaceTess.png">
+        </center>
+        <p>Each instance belonging
+            to a particular cluster is independently drawn from a normal
+            distribution that defines the said cluster. While positive bags
+            can draw a subset of random cardinality of instances from
+            negative distributions, negative bags cannot draw any data
+            from positive distributions. Every positive bag must have at least one instance sampled from a positive
+            distribution
+            (marked in green ellipses P1 through P4, in the above figure). The centroids
+            of these clusters would be the ideal positive instance prototypes
+            that a MIL algorithm should identify. A prototype is an idealized point around which any point will share
+            simliar characteristics.
+        </p>
+
+        <p> In most MIL cases, one constructs a function as shown above that 'models' the 'positivity' of a MIL
+            neighborhood. Any
+            local maximas in this space are the positive instance prototype that we are looking for. Once a prototype is
+            figured,
+            its a straightforward manimization of training error to identify a radius around the prototype to construct
+            a hyper-sphere that
+            is a region for classifying a point as a truly and inherently positive instance. </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="content">
         <h2 style="margin-top:-5px">Publications in this project</h2>
-        
-<ol>
 
-    <li>Parag Shridhar Chandakkar, <a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, <a target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>
-    <strong>"MIRank-KNN: multiple-instance retrieval of clinically relevant diabetic retinopathy images"</strong> in the <em>Journal of Medical Imaging</em>, 2017.
-    [<a href="{{ site.url }}/publications/2017/bib/mirank_spie_17.bib" class="tooltips" title="Bibtex" target="_blank">bibtex</a>]
-    </p></li>
+        <ol>
 
-    <li><a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, Parag Shridhar Chandakkar, <a target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>
-<strong>"Simpler non-parametric methods provide as good or better results to
-multiple-instance learning."</strong> at the <em>IEEE International Conference on Computer Vision (ICCV)</em>, Santiago, Chile, 2015.
-[<a href="{{ site.url }}/publications/2015/iccv_15.pdf" class="tooltips" title="Download" target="_blank">paper</a>]
-[<a href="{{ site.url }}/publications/2015/bib/iccv_15.bib" class="tooltips" title="Bibtex" target="_blank">bibtex</a>]
-[<a href="{{ site.url }}/publications/2015/iccv_15_poster.pdf" class="tooltips" title="Poster" target="_blank">poster</a>]
-[<a href="https://github.com/ragavvenkatesan/np-mil" class="tooltips" title="Poster" target="_blank">code</a>]
- </p></li>
+            <li>Parag Shridhar Chandakkar, <a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, <a
+                    target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>
+                <strong>"MIRank-KNN: multiple-instance retrieval of clinically relevant diabetic retinopathy
+                    images"</strong> in the <em>Journal of Medical Imaging</em>, 2017.
+                [<a href="{{ site.url }}/publications/2017/bib/mirank_spie_17.bib" class="tooltips" title="Bibtex"
+                    target="_blank">bibtex</a>]
+                </p>
+            </li>
 
-    <li>Parag Shridhar Chandakkar, <a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, <a target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>, Helen Li
-<strong>"Retrieving clinically relevant diabetic retinopathy images using a multi-class multiple-instance framework."</strong> at the <em>SPIE conference on Medical Imaging (SPIE-MI)</em>, Florida, USA, 2013.
-[<a href="https://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1658260" class="tooltips" title="External link" target="_blank">external link</a>]
-[<a href="{{ site.url }}/publications/2013/spie_13.pdf" class="tooltips" title="Download" target="_blank">paper</a>]
-[<a href="{{ site.url }}/publications/2013/bib/spie_13.bib" class="tooltips" title="Bibtex" target="_blank">bibtex</a>]
-[<a href="{{ site.url }}/publications/2013/spie_13_ppt.pdf" class="tooltips" title="Slies" target="_blank">slides</a>]
-[code]
- </p></li>
+            <li><a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, Parag Shridhar Chandakkar, <a
+                    target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>
+                <strong>"Simpler non-parametric methods provide as good or better results to
+                    multiple-instance learning."</strong> at the <em>IEEE International Conference on Computer Vision
+                    (ICCV)</em>, Santiago, Chile, 2015.
+                [<a href="{{ site.url }}/publications/2015/iccv_15.pdf" class="tooltips" title="Download"
+                    target="_blank">paper</a>]
+                [<a href="{{ site.url }}/publications/2015/bib/iccv_15.bib" class="tooltips" title="Bibtex"
+                    target="_blank">bibtex</a>]
+                [<a href="{{ site.url }}/publications/2015/iccv_15_poster.pdf" class="tooltips" title="Poster"
+                    target="_blank">poster</a>]
+                [<a href="https://github.com/ragavvenkatesan/np-mil" class="tooltips" title="Poster"
+                    target="_blank">code</a>]
+                </p>
+            </li>
+
+            <li>Parag Shridhar Chandakkar, <a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, <a
+                    target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>, Helen Li
+                <strong>"Retrieving clinically relevant diabetic retinopathy images using a multi-class
+                    multiple-instance framework."</strong> at the <em>SPIE conference on Medical Imaging (SPIE-MI)</em>,
+                Florida, USA, 2013.
+                [<a href="https://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1658260" class="tooltips"
+                    title="External link" target="_blank">external link</a>]
+                [<a href="{{ site.url }}/publications/2013/spie_13.pdf" class="tooltips" title="Download"
+                    target="_blank">paper</a>]
+                [<a href="{{ site.url }}/publications/2013/bib/spie_13.bib" class="tooltips" title="Bibtex"
+                    target="_blank">bibtex</a>]
+                [<a href="{{ site.url }}/publications/2013/spie_13_ppt.pdf" class="tooltips" title="Slies"
+                    target="_blank">slides</a>]
+                [code]
+                </p>
+            </li>
 
 
-    <li>Parag Shridhar Chandakkar, <a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, <a target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>, Helen Li
-<strong>"Clinically relevant diabetic retinopathy image retrieval using a multi-class multiple instance framework."</strong> at the <em>ACM conference on Bio-informatics, Computational Biology and Biomedicine (ACM-BCB)</em>, Florida, USA, 2012.
-[<a href="https://dl.acm.org/citation.cfm?id=2383030" class="tooltips" title="External link" target="_blank">external link</a>]
-[<a href="{{ site.url }}/publications/2012/bcb_12.pdf" class="tooltips" title="Download" target="_blank">paper</a>]
-[<a href="{{ site.url }}/publications/2012/bib/bcb_12.bib" class="tooltips" title="Bibtex" target="_blank">bibtex</a>]
-[<a href="{{ site.url }}/publications/2012/bcb_12_poster.pdf" class="tooltips" title="Poster" target="_blank">poster</a>]
- </p></li>
- 
-     <li><a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, Parag Shridhar Chandakkar, <a target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>, Helen Li
-<strong>"Classification of diabetic retinopathy images using multi-class multiple-instance learning based on color correlogram features"</strong> at the <em>IEEE International Conference Engineering in Medicine and Biology Society</em>, San Diego, USA, 2012.
-[<a href="https://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6346216" class="tooltips" title="External link" target="_blank">external link</a>]
-[<a href="{{ site.url }}/publications/2012/embc_12.pdf" class="tooltips" title="Download" target="_blank">paper</a>]
-[<a href="{{ site.url }}/publications/2012/bib/embc_12.bib" class="tooltips" title="Bibtex" target="_blank">bibtex</a>]
-[<a href="{{ site.url }}/publications/2012/embc_12_poster.pdf" class="tooltips" title="Poster" target="_blank">poster</a>]
- </p></li>
+            <li>Parag Shridhar Chandakkar, <a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, <a
+                    target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>, Helen Li
+                <strong>"Clinically relevant diabetic retinopathy image retrieval using a multi-class multiple instance
+                    framework."</strong> at the <em>ACM conference on Bio-informatics, Computational Biology and
+                    Biomedicine (ACM-BCB)</em>, Florida, USA, 2012.
+                [<a href="https://dl.acm.org/citation.cfm?id=2383030" class="tooltips" title="External link"
+                    target="_blank">external link</a>]
+                [<a href="{{ site.url }}/publications/2012/bcb_12.pdf" class="tooltips" title="Download"
+                    target="_blank">paper</a>]
+                [<a href="{{ site.url }}/publications/2012/bib/bcb_12.bib" class="tooltips" title="Bibtex"
+                    target="_blank">bibtex</a>]
+                [<a href="{{ site.url }}/publications/2012/bcb_12_poster.pdf" class="tooltips" title="Poster"
+                    target="_blank">poster</a>]
+                </p>
+            </li>
 
-		</ol></div>
+            <li><a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a>, Parag Shridhar Chandakkar, <a
+                    target="_blank" href="https://www.public.asu.edu/~bli24/">Baoxin Li</a>, Helen Li
+                <strong>"Classification of diabetic retinopathy images using multi-class multiple-instance learning
+                    based on color correlogram features"</strong> at the <em>IEEE International Conference Engineering
+                    in Medicine and Biology Society</em>, San Diego, USA, 2012.
+                [<a href="https://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6346216" class="tooltips"
+                    title="External link" target="_blank">external link</a>]
+                [<a href="{{ site.url }}/publications/2012/embc_12.pdf" class="tooltips" title="Download"
+                    target="_blank">paper</a>]
+                [<a href="{{ site.url }}/publications/2012/bib/embc_12.bib" class="tooltips" title="Bibtex"
+                    target="_blank">bibtex</a>]
+                [<a href="{{ site.url }}/publications/2012/embc_12_poster.pdf" class="tooltips" title="Poster"
+                    target="_blank">poster</a>]
+                </p>
+            </li>
+
+        </ol>
+    </div>
 
 
-     <div class="content">
-         
-         <p> If you have any questions/comments about any of these papers/code/datasets, please address them to <a target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a> </p>
-     </div>   
-        
+    <div class="content">
+
+        <p> If you have any questions/comments about any of these papers/code/datasets, please address them to <a
+                target="_blank" href="https://www.ragav.net">Ragav Venkatesan</a> </p>
+    </div>
+
 
 </body>

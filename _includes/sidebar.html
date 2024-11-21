@@ -82,14 +82,25 @@
             </a>
           </li>
 
-          <a href="http://varietypack.band">
-            {% if page.path == "variety-pack.html" %}
+          <a href="http://sugarbonesband.com">
+            {% if page.path == "sugarbones.html" %}
+            <li class="currentmenu">
+              {% else %}
+            <li>
+              {% endif %}
+              <div class="icon"><img width="25em" src="{{site.url}}/img/personal/sugarbones-sidebar.png"></div>
+              <div class="text">Sugar Bones</div>
+          </a>
+          </li>
+
+          <a href="http://sludgefactory.band">
+            {% if page.path == "sludgefactory.html" %}
             <li class="currentmenu">
               {% else %}
             <li>
               {% endif %}
               <div class="icon"><img width="25em" src="{{site.url}}/img/personal/vp-logo-sidebar.png"></div>
-              <div class="text">Variety Pack</div>
+              <div class="text">Sludge Factory</div>
           </a>
           </li>
 

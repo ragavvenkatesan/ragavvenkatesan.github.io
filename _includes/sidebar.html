@@ -60,6 +60,17 @@
             </a>
           </li>
 
+          {% if page.path == "epk/index.html" %}
+          <li class="currentmenu">
+            {% else %}
+          <li>
+            {% endif %}
+            <a href="{{site.url}}/epk">
+              <div class="icon"><img width="25em" src="{{site.url}}/img/personal/ragav-logo.png"></div>
+              <div class="text">Ragav - Solo Project</div>
+            </a>
+          </li>
+          
           {% if page.path == "photography/index.html" %}
           <li class="currentmenu">
             {% else %}

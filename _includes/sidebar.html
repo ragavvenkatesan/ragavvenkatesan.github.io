@@ -94,6 +94,16 @@
           </a>
           </li>
 
+          <a href="https://ragavvenkatesan.myportfolio.com/">
+            {% if page.path == "photography.html" %}
+            <li class="currentmenu">
+              {% else %}
+            <li>
+              {% endif %}
+              <div class="icon icon-camera"></div>
+              <div class="text">Photography</div>
+          </a>
+          </li>
 
           <a href="{{site.url}}/thaalam.html">
             {% if page.path == "thaalam.html" %}
